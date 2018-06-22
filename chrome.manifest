@@ -1,0 +1,8 @@
+content	customize_newtab	chrome/content/
+skin	customize_newtab	classic	chrome/skin/
+
+
+locale	customize_newtab	en-US	chrome/locale/en-US/
+locale	customize_newtab	es-ES	chrome/locale/es-ES/
+
+overlay	chrome://browser/content/browser.xul	chrome://customize_newtab/content/ff-overlay.xul

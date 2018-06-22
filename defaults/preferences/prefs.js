@@ -1,0 +1,16 @@
+pref("extensions.customize_newtab.bgImage", "");
+pref("extensions.customize_newtab.bgRepeat", "no-repeat");
+pref("extensions.customize_newtab.bgSize", "contain");
+pref("extensions.customize_newtab.bgSizeWidth", 50);
+pref("extensions.customize_newtab.bgSizeWidthM", "%");
+pref("extensions.customize_newtab.bgSizeWidthAuto", true);
+pref("extensions.customize_newtab.bgSizeHeight", 50);
+pref("extensions.customize_newtab.bgSizeHeightM", "%");
+pref("extensions.customize_newtab.bgSizeHeightAuto", true);
+pref("extensions.customize_newtab.bgPositionH", "center");
+pref("extensions.customize_newtab.bgPositionV", "center");
+pref("extensions.customize_newtab.bgColor", "#E5E5E5");
+pref("extensions.customize_newtab.oldHomePage", "");
+pref("extensions.customize_newtab.homePageCheck", false);
+pref("extensions.customize_newtab.showTopSites", true);
+pref("extensions.customize_newtab.showSearchBar", true);
