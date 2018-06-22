@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="options.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://customize_newtab/locale/options.dtd">
+
+<prefwindow id="cnt-preferences" 
+				title="&customize_newtab.prefWindowTitle;" 
+				xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept,cancel"
+				ondialogaccept="customize_newtab.Preferences.preferenceAccept();"
+        onunload="customize_newtab.Preferences.preferencesUnload();"
+				>
+  
+	<prefpane id="ent-options-pane" onpaneload="customize_newtab.Preferences.preferenceLoad();">
+  
+		<preferences>
+			<preference id="cnt.bgImage"          name="extensions.customize_newtab.bgImage"           type="string"/>
+			<preference id="cnt.bgRepeat"         name="extensions.customize_newtab.bgRepeat"          type="string"/>
+			<preference id="cnt.bgSize"           name="extensions.customize_newtab.bgSize"            type="string"/>
+			<preference id="cnt.bgSizeWidth"      name="extensions.customize_newtab.bgSizeWidth"       type="int"/>
+			<preference id="cnt.bgSizeWidthM"     name="extensions.customize_newtab.bgSizeWidthM"      type="string"/>
+			<preference id="cnt.bgSizeWidthAuto"  name="extensions.customize_newtab.bgSizeWidthAuto"   type="bool"/>
+      <preference id="cnt.bgSizeHeight"     name="extensions.customize_newtab.bgSizeHeight"      type="int"/>
+			<preference id="cnt.bgSizeHeightM"    name="extensions.customize_newtab.bgSizeHeightM"     type="string"/>
+			<preference id="cnt.bgSizeHeightAuto" name="extensions.customize_newtab.bgSizeHeightAuto"  type="bool"/>
+			<preference id="cnt.bgPositionH"      name="extensions.customize_newtab.bgPositionH"       type="string"/>
+			<preference id="cnt.bgPositionV"      name="extensions.customize_newtab.bgPositionV"       type="string"/>
+			<preference id="cnt.bgPositionV"      name="extensions.customize_newtab.bgPositionV"       type="string"/>
+			<preference id="cnt.bgColor"          name="extensions.customize_newtab.bgColor"           type="string"/>
+			<preference id="cnt.homePageCheck"    name="extensions.customize_newtab.homePageCheck"     type="bool"/>
+      <preference id="cnt.columns"          name="browser.newtabpage.columns"                    type="int"/>
+      <preference id="cnt.rows"             name="browser.newtabpage.rows"                       type="int"/>
+      <preference id="cnt.showTopSites"     name="extensions.customize_newtab.showTopSites"      type="bool"/>
+      <preference id="cnt.showSearchBar"    name="extensions.customize_newtab.showSearchBar"     type="bool"/>
+		</preferences>
+		
+    <bbox>
+      <checkbox id="cnt_homePageCheck" 
+        label="&customize_newtab.cnt_homePageCheck;" 
+        preference="cnt.homePageCheck" 
+        oncommand="customize_newtab.Preferences.homePageCheck();"/>
+    </bbox>
+    <bbox>
+      <checkbox id="cnt_showSearchBar"
+        label="&customize_newtab.showSearchBar;" 
+        preference="cnt.showSearchBar"/>
+    </bbox>
+    <bbox>
+      <checkbox id="cnt_showTopSites"
+        label="&customize_newtab.showTopSites;" 
+        preference="cnt.showTopSites" 
+        oncommand="customize_newtab.Preferences.showTopSites();"/>
+      <label id="cnt_columnsLabel" control="cnt_columns" value="&customize_newtab.columns;"/>
+      <textbox id="cnt_columns" preference="cnt.columns" type="number" size="2" min="1" max="99" increment="1"/>
+      <label id="cnt_rowsLabel" control="cnt_rows" value="&customize_newtab.rows;"/>
+      <textbox id="cnt_rows" preference="cnt.rows" type="number" size="2" min="1" max="99" increment="1"/>
+    </bbox>
+    
+    <groupbox>
+      <caption label="&customize_newtab.backgroundGroupbox;"/>
+      <bbox>
+        <label id="cnt_bgColorLabel" value="&customize_newtab.cnt_bgColorLabel;" control="cnt_bgColor"/>
+        <colorpicker id="cnt_bgColor" type="button" preference="cnt.bgColor"/>
+        <label id="cnt_imageLocationLabel" value="&customize_newtab.cnt_imageLocationLabel;" control="cnt_imageLocation"/>
+        <textbox id="cnt_imageLocation" preference="cnt.bgImage" size="65"/>
+        <button id="cnt_chooseFileButton" label="&customize_newtab.cnt_chooseFileButton;" oncommand="customize_newtab.Preferences.showFileBrowser();"/>
+      </bbox>
+    </groupbox>
+    
+    <bbox>
+      <command id="sizeTypeDisplay" oncommand="customize_newtab.Preferences.sizeTypeDisplay();"/>
+      <label id="cnt_bgSizeLabel" control="cnt_bgSize" value="&customize_newtab.cnt_bgSizeLabel;"/>
+      <radiogroup id="cnt_bgSize" preference="cnt.bgSize" orient="horizontal">
+        <radio id="cover"   label="&customize_newtab.cover;"   value="cover"   command="sizeTypeDisplay"/>
+        <radio id="contain" label="&customize_newtab.contain;" value="contain" command="sizeTypeDisplay"/>
+        <radio id="custom"  label="&customize_newtab.custom;"  value="custom"  command="sizeTypeDisplay"/>
+      </radiogroup>
+    </bbox>
+    
+    <groupbox id="bgRepeat">
+      <bbox>
+        <label id="cnt_bgRepeatLabel" control="cnt_bgRepeat" value="&customize_newtab.cnt_bgRepeatLabel;"/>
+        <radiogroup id="cnt_bgRepeat" preference="cnt.bgRepeat" orient="horizontal">
+          <radio id="yes" label="&customize_newtab.yes;" value="repeat"/>
+          <radio id="no" label="&customize_newtab.no;" value="no-repeat"/>
+        </radiogroup>
+      </bbox>
+    </groupbox>
+    
+		<groupbox id="sizeCustomGroup">
+      <caption label="&customize_newtab.customSizeGroupbox;"/>
+      <bbox>
+        <label id="cnt_bgPositionVLabel" control="cnt_bgPositionV" value="&customize_newtab.cnt_bgPositionVLabel;" class="positionLabels"/>
+        <radiogroup id="cnt_bgPositionV" preference="cnt.bgPositionV" orient="horizontal">
+          <radio id="vTop"    label="&customize_newtab.vTop;"     value="top"     class="rightRadio"/>
+          <radio id="vCenter" label="&customize_newtab.vCenter;"  value="center"  class="rightRadio"/>
+          <radio id="vBottom" label="&customize_newtab.vBottom;"  value="bottom"  class="rightRadio"/>
+        </radiogroup>
+      </bbox>
+      
+      <bbox>
+        <label id="cnt_bgPositionHLabel" control="cnt_bgPositionH" value="&customize_newtab.cnt_bgPositionHLabel;"  class="positionLabels"/>
+        <radiogroup id="cnt_bgPositionH" preference="cnt.bgPositionH" orient="horizontal">
+          <radio id="hLeft"   label="&customize_newtab.hLeft;"    value="left"    class="rightRadio"/>
+          <radio id="hCenter" label="&customize_newtab.hCenter;"  value="center"  class="rightRadio"/>
+          <radio id="hRight"  label="&customize_newtab.hRight;"   value="right"   class="rightRadio"/>
+        </radiogroup>
+      </bbox>
+      
+      <groupbox>
+        <caption label="&customize_newtab.backgroundSizeGroupbox;"/>
+        <bbox orient="horizontal">
+          <label id="cnt_bgSizeWidthLabel" control="cnt_bgSizeWidth" value="&customize_newtab.cnt_bgSizeWidthLabel;" class="sizeLabels"/>
+          <checkbox id="cnt_bgSizeWidthCheck" label="&customize_newtab.auto;" preference="cnt.bgSizeWidthAuto" oncommand="customize_newtab.Preferences.sizeWidthDisplay();"/>
+          <textbox id="cnt_bgSizeWidth" preference="cnt.bgSizeWidth" type="number" increment="1" min="1" max="9999" size="4"/>
+          <menulist id="cnt_bgSizeWidthM" preference="cnt.bgSizeWidthM">
+            <menupopup>
+              <menuitem label="%"   value="%"/>
+              <menuitem label="px"  value="px"/>
+            </menupopup>
+          </menulist>
+        </bbox>
+        <bbox orient="horizontal">
+          <label id="cnt_bgSizeHeightLabel" control="cnt_bgSizeHeight" value="&customize_newtab.cnt_bgSizeHeightLabel;" class="sizeLabels"/>
+          <checkbox id="cnt_bgsizeHeightCheck" label="&customize_newtab.auto;" preference="cnt.bgSizeHeightAuto" oncommand="customize_newtab.Preferences.sizeHeightDisplay();"/>
+          <textbox id="cnt_bgSizeHeight" preference="cnt.bgSizeHeight" type="number" increment="1" min="1" max="9999" size="4"/>
+          <menulist id="cnt_bgSizeHeightM" preference="cnt.bgSizeHeightM">
+            <menupopup>
+              <menuitem label="%"   value="%"/>
+              <menuitem label="px"  value="px"/>
+            </menupopup>
+          </menulist>
+        </bbox>
+      </groupbox>
+      
+    </groupbox>
+    
+	</prefpane>
+  <script src="options.js"/>
+</prefwindow>

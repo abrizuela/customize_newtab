@@ -1,0 +1,30 @@
+<!ENTITY customize_newtab.cnt_homePageCheck       "Make about:newtab my home page">
+<!ENTITY customize_newtab.backgroundGroupbox      "Background">
+<!ENTITY customize_newtab.cnt_bgColorLabel        "Color:">
+<!ENTITY customize_newtab.cnt_imageLocationLabel  "Image:">
+<!ENTITY customize_newtab.cnt_chooseFileButton    "Browse...">
+<!ENTITY customize_newtab.cnt_bgSizeLabel         "Image size:">
+<!ENTITY customize_newtab.cover                   "Cover">
+<!ENTITY customize_newtab.contain                 "Contain">
+<!ENTITY customize_newtab.custom                  "Customized">
+<!ENTITY customize_newtab.cnt_bgRepeatLabel       "Background repeat:">
+<!ENTITY customize_newtab.yes                     "Yes">
+<!ENTITY customize_newtab.no                      "No">
+<!ENTITY customize_newtab.customSizeGroupbox      "Customized size preferences">
+<!ENTITY customize_newtab.cnt_bgPositionVLabel    "Background vertical position:">
+<!ENTITY customize_newtab.vTop                    "Top">
+<!ENTITY customize_newtab.vCenter                 "Center">
+<!ENTITY customize_newtab.vBottom                 "Bottom">
+<!ENTITY customize_newtab.cnt_bgPositionHLabel    "Background horizontal position:">
+<!ENTITY customize_newtab.hLeft                   "Left">
+<!ENTITY customize_newtab.hCenter                 "Center">
+<!ENTITY customize_newtab.hRight                  "Right">
+<!ENTITY customize_newtab.backgroundSizeGroupbox  "Background size">
+<!ENTITY customize_newtab.cnt_bgSizeWidthLabel    "Width:">
+<!ENTITY customize_newtab.cnt_bgSizeHeightLabel   "Height:">
+<!ENTITY customize_newtab.auto                    "Auto">
+<!ENTITY customize_newtab.prefWindowTitle         "Customize about:newtab">
+<!ENTITY customize_newtab.columns                 "Columns:">
+<!ENTITY customize_newtab.rows                    "Rows:">
+<!ENTITY customize_newtab.showTopSites			  "Show top sites">
+<!ENTITY customize_newtab.showSearchBar			  "Show Search Bar">

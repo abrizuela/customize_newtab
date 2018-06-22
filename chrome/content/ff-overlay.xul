@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<overlay id="customize_newtab-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="ff-overlay.js"/>
+  
+  <stringbundleset id="stringbundleset">
+		<stringbundle id="cnt-string-bundle" src="chrome://customize_newtab/locale/overlay.properties"/>
+	</stringbundleset>
+  
+</overlay>

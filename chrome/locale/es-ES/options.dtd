@@ -1,0 +1,30 @@
+<!ENTITY customize_newtab.cnt_homePageCheck       "Hacer about:newtab mi página de inicio">
+<!ENTITY customize_newtab.backgroundGroupbox      "Fondo">
+<!ENTITY customize_newtab.cnt_bgColorLabel        "Color:">
+<!ENTITY customize_newtab.cnt_imageLocationLabel  "Imagen:">
+<!ENTITY customize_newtab.cnt_chooseFileButton    "Buscar...">
+<!ENTITY customize_newtab.cnt_bgSizeLabel         "Tamaño de la imagen:">
+<!ENTITY customize_newtab.cover                   "Llenar">
+<!ENTITY customize_newtab.contain                 "Ajustar">
+<!ENTITY customize_newtab.custom                  "Personalizar">
+<!ENTITY customize_newtab.cnt_bgRepeatLabel       "Repetir fondo:">
+<!ENTITY customize_newtab.yes                     "Si">
+<!ENTITY customize_newtab.no                      "No">
+<!ENTITY customize_newtab.customSizeGroupbox      "Preferencias de tamaño personalizadas">
+<!ENTITY customize_newtab.cnt_bgPositionVLabel    "Posición vertical del fondo:">
+<!ENTITY customize_newtab.vTop                    "Arriba">
+<!ENTITY customize_newtab.vCenter                 "Centro">
+<!ENTITY customize_newtab.vBottom                 "Abajo">
+<!ENTITY customize_newtab.cnt_bgPositionHLabel    "Posición horizontal del fondo:">
+<!ENTITY customize_newtab.hLeft                   "Izquierda">
+<!ENTITY customize_newtab.hCenter                 "Centro">
+<!ENTITY customize_newtab.hRight                  "Derecha">
+<!ENTITY customize_newtab.backgroundSizeGroupbox  "Tamaño del fondo">
+<!ENTITY customize_newtab.cnt_bgSizeWidthLabel    "Ancho:">
+<!ENTITY customize_newtab.cnt_bgSizeHeightLabel   "Alto:">
+<!ENTITY customize_newtab.auto                    "Auto">
+<!ENTITY customize_newtab.prefWindowTitle         "Personalizar about:newtab">
+<!ENTITY customize_newtab.columns                 "Columnas:">
+<!ENTITY customize_newtab.rows                    "Filas:">
+<!ENTITY customize_newtab.showTopSites			  "Muestra los sitios preferidos">
+<!ENTITY customize_newtab.showSearchBar			  "Muestra barra de búsqueda">
